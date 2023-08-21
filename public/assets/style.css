@@ -1,0 +1,84 @@
+input[type=text]{
+    width: 70%;
+    padding: 0.4rem;
+}
+ul{
+    list-style-type: none;
+}
+.list{
+    display: inline-block;
+    margin-right: 10%;
+}
+.btnSubmit{
+    padding: 0.5rem;
+    background-color: orange;
+    font-weight: bold;
+    color: white;
+    border-radius: 0.2rem;
+    border: none;
+}
+#accountListBtn{
+    border: 2px solid grey;
+    padding: 0.3rem;
+    border-radius: 0.2rem;
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+    width: 30%;
+    text-align: center;
+}
+#accountListBtn:active{
+    border: 3px solid orange;
+}
+li:hover{
+    cursor: pointer;
+}
+/* .navigationContainer{
+
+} */
+.navigationContainerUl{
+    background-color: white;
+    font-weight: bold;
+    width: 60%;
+    border-radius: 0.3rem;
+    padding-left: 1.5%;
+}
+#sitename{
+    color: orange;
+}
+.listNavBar{
+    margin-bottom: 5%;
+}
+.listNavBar:hover{
+    color: orange;
+    font-weight: bold;
+}
+.Icon{
+    margin-right: 4%;
+}
+footer{
+    padding-top: 1rem;
+    color: white;
+}
+.firstFooterContainer{
+    background-color: black;
+}
+#footerSitename{
+    color: white;
+}
+.containerFooter{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.footerLastRow{
+    background-color: gray;
+}
+.lastFooterList{
+    width: 50%;
+}
+.lastFooterList2{
+    margin-left: -50%;
+}
+#paymentsIcon{
+    width: 40%;
+}
