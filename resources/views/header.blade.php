@@ -1,5 +1,20 @@
-<div class="col-1"></div>
-<div class="col">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>header</title>
+    <link rel="stylesheet" href="{{asset("assets/fontawesome/css/all.css")}}">
+    <link rel="stylesheet" href="{{ asset("assets/style.css") }}">
+    <link rel="stylesheet" href="{{asset("assets/bootstrap-4/css/bootstrap.css")}}">
+</head>
+<body>
+    
+</body>
+</html>
+<div class="col-1 headerContainer"></div>
+<div class="col headerContainer">
     <div class="row p-3">
         <div class="col-6 col-md-2">
             <h1><span id="sitename">Cy</span>prof</h1>
@@ -25,4 +40,4 @@
     {{-- navigation bars section --}}
     
 </div>
-<div class="col-1"></div>
+<div class="col-1 headerContainer"></div>

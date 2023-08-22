@@ -67,3 +67,5 @@
     </div>
 
 </footer>
+{{-- end for footer --}}
+<script src="{{asset("assets/bootstrap-4/js/bootstrap.js")}}"></script>

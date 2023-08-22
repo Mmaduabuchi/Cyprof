@@ -5,9 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>{{ config('application.name', 'Cyprof') }}</title>
-        <link rel="stylesheet" href="{{asset("assets/fontawesome/css/all.css")}}">
-        <link rel="stylesheet" href="{{ asset("assets/style.css") }}">
-        <link rel="stylesheet" href="{{asset("assets/bootstrap-4/css/bootstrap.css")}}">
     </head>
     <body class=" bg-light">
         {{-- header --}}
@@ -39,7 +36,5 @@
         <div class="row">
             @extends('footer')
         </div>
-        {{-- end for footer --}}
-        <script src="{{asset("assets/bootstrap-4/js/bootstrap.js")}}"></script>
     </body>
 </html>

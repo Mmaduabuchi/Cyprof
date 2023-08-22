@@ -82,3 +82,31 @@ footer{
 #paymentsIcon{
     width: 40%;
 }
+.cartContainer2{
+    padding: 5rem;
+    background-color: white;
+    border-radius: 0.3rem;
+    box-shadow: 2px 2px 6px grey;
+}
+.cartBtn{
+    padding: 0.5rem;
+    background-color: orange;
+    font-weight: bold;
+    color: white;
+    border-radius: 0.2rem;
+    border: none;
+    box-shadow: 2px 2px 6px grey;
+}
+.cartBtn:hover{
+    cursor: pointer;
+}
+.cartpageIcon{
+    font-size: 3rem;
+}
+.contactHelpContainer{
+    background-color: orange;
+    color: white;
+}
+.headerContainer{
+    background-color: white;
+}
