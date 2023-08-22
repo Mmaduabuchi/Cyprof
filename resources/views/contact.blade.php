@@ -15,6 +15,7 @@
             <h1>NEED HELP?</h1>
         </div>
     </div>
+      
     <div class="row">
         @extends('footer')
     </div>    

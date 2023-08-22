@@ -12,7 +12,8 @@
             @include('header')
         </div>
         {{-- end for header --}}
-        <div class="row">
+        <div class="row mt-3">
+            <div class="col col-md-1"></div>
             <div class="col">
                 <div class="navigationContainer">
                     <ul class="navigationContainerUl">

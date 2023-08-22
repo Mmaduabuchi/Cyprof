@@ -17,7 +17,11 @@
 <div class="col headerContainer">
     <div class="row p-3">
         <div class="col-6 col-md-2">
-            <h1><span id="sitename">Cy</span>prof</h1>
+            <h1>
+                <a href="/" class="text-dark">
+                    <span id="sitename">Cy</span>prof
+                </a>
+            </h1>
         </div>
         <div class="col-6 d-block d-md-none">
             {{-- nothing is here yet --}}
@@ -33,7 +37,11 @@
             <ul>
                 <li class="list" id="accountListBtn"><span class="fa fa-user"></span>Account <span class="fa fa-chevron-down"></span> </li>
                 <li class="list"><span class="fa fa-question-circle"></span>Help</li>
-                <li class="list"><span class="fa fa-shopping-cart"></span>Cart</li>
+                <li class="list">
+                    <a href="cart" class="text-dark">
+                        <span class="fa fa-shopping-cart"></span>Cart
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

@@ -4,7 +4,11 @@
         <div class="col">
             <div class="row">
                 <div class="col">
-                    <h1 id="footerSitename"><span id="sitename">Cy</span>prof</h1>
+                    <h1>
+                        <a href="/" class="text-light">
+                            <span id="sitename">Cy</span>prof
+                        </a>
+                    </h1>
                 </div>
                 <div class="col">
                     <span><b>NEW TO CYPROF</b></span>
@@ -28,7 +32,9 @@
                         </li>
                         <br>
                         <li>Help Center</li>
-                        <li>Contact Us</li>
+                        <li>
+                            <a href="contact" class="text-light">Contact Us</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="lastFooterList2">
