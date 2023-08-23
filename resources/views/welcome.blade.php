@@ -11,6 +11,9 @@
         <div class="row">
             @include('header')
         </div>
+        <div class="dropdownRowContainer">
+            @include('acctDropdown')
+        </div>
         {{-- end for header --}}
         <div class="row mt-3">
             <div class="col col-md-1"></div>

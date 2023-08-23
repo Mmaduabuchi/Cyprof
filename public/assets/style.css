@@ -113,3 +113,55 @@ footer{
 a{
     text-decoration: none;
 }
+.signIBtnNav{
+    padding: 0.5rem;
+    background-color: orange;
+    font-weight: bold;
+    color: white;
+    border-radius: 0.2rem;
+    border: none;
+    box-shadow: 2px 2px 6px grey;
+    width: 55%;
+}
+.signIBtnNavContainer{
+    border: 2px solid;
+    border: none;
+    border-radius: 0.3rem;
+    box-shadow: 2px 2px 6px grey;
+    width: 50%;
+    padding-top: 0.9rem;
+    background-color: white;
+    margin-left: 20%;
+}
+.signIBtnNav:hover{
+    cursor: pointer;
+}
+.dropdownRowContainer{
+    display: none;
+    /* position: absolute; */
+}
+.closeBtn:hover{
+    cursor: pointer;
+    text-shadow: -2px 1px 7px grey;
+}
+#inputBox{
+    margin-bottom: 5%;
+}
+#signupFormContainer{
+    border: 2px solid;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 6px grey;
+    padding: 1rem;
+    margin-top: 10%;
+    margin-bottom: 20%;
+    margin-left: 10%;
+}
+.SignupSubmitBtn{
+    background-color: orange;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    box-shadow: 2px 2px 6px grey;
+    border: none;
+}

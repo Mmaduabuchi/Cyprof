@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{asset("assets/fontawesome/css/all.css")}}">
     <link rel="stylesheet" href="{{ asset("assets/style.css") }}">
     <link rel="stylesheet" href="{{asset("assets/bootstrap-4/css/bootstrap.css")}}">
+    <script src="{{asset("assets/app.js")}}" defer></script>
 </head>
 <body>
     
