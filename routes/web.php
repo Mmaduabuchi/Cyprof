@@ -30,3 +30,9 @@ Route::get('/signup', function () {
 Route::get('/signin', function () {
     return view('login');
 });
+Route::get('/customer/account', function () {
+    return view('customer.account');
+});
+Route::get('/admin', function () {
+    return view('admin.admin');
+});
