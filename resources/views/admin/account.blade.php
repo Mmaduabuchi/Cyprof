@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>admin</title>
+    <title>admin/account</title>
     <link rel="stylesheet" href="{{asset("assets/fontawesome/css/all.css")}}">
     <link rel="stylesheet" href="{{ asset("assets/style.css") }}">
     <link rel="stylesheet" href="{{asset("assets/bootstrap-4/css/bootstrap.css")}}">
@@ -72,61 +72,7 @@
             </div>
             <div class="row mt-3">
                 <div class="col">
-                    <h3>Dashboard</h3>
-                </div>
-            </div>
-            <div class="row m-4">
-                <div class="col">
-                    <div class="containerBox1">
-                        <div class="row">
-                            <div class="col">
-                                <span class="containerBox1Text">Users</span>
-                                <h2>23,000k</h2>
-                            </div>
-                            <div class="col">
-                                <span class="fa fa-users"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="containerBox2">
-                        <div class="row">
-                            <div class="col">
-                                <span class="containerBox2Text">Orders</span>
-                                <h2>2,300</h2>
-                            </div>
-                            <div class="col">
-                                <span class="fa fa-shopping-cart"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="containerBox3">
-                        <div class="row">
-                            <div class="col">
-                                <span class="containerBox3Text">Products</span>
-                                <h2>600</h2>
-                            </div>
-                            <div class="col">
-                                <span class="fa fa-store"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="containerBox4">
-                        <div class="row">
-                            <div class="col">
-                                <span class="containerBox4Text">Users</span>
-                                <h2>23,000k</h2>
-                            </div>
-                            <div class="col">
-                                <span class="fa fa-users"></span>
-                            </div>
-                        </div>
-                    </div>
+                    <h3>Admin account</h3>
                 </div>
             </div>
         </div>

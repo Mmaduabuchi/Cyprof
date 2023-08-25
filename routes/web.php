@@ -36,3 +36,6 @@ Route::get('/customer/account', function () {
 Route::get('/admin', function () {
     return view('admin.admin');
 });
+Route::get('/admin/account', function () {
+    return view('admin.account');
+});
