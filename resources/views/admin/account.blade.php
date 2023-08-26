@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>admin/account</title>
+    <title>admin/message</title>
     <link rel="stylesheet" href="{{asset("assets/fontawesome/css/all.css")}}">
     <link rel="stylesheet" href="{{ asset("assets/style.css") }}">
     <link rel="stylesheet" href="{{asset("assets/bootstrap-4/css/bootstrap.css")}}">
@@ -53,10 +53,7 @@
         <div class="col">
             <div class="row shadow-sm shadowSmContainer">
                 <div class="col p-3">
-                    <form action="" method="post">
-                        <input type="text" name="search" placeholder="Search for....." id="inputSearchboxAdmin">
-                        <input type="submit" value="SEARCH" id="inputSubmitBtnAdmin">
-                    </form>
+                    <h2>MESSAGE</h2>
                 </div>
                 <div class="col text-left col-md-5 p-3 shadowSmSidebarContainer">
                     <div class="row">
@@ -72,7 +69,7 @@
             </div>
             <div class="row mt-3">
                 <div class="col">
-                    <h3>Admin account</h3>
+                    <h3>Admin message</h3>
                 </div>
             </div>
         </div>

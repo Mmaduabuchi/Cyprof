@@ -127,18 +127,19 @@ a{
     border: 2px solid;
     border: none;
     border-radius: 0.3rem;
-    box-shadow: 2px 2px 6px grey;
-    width: 50%;
+    box-shadow: -1px 2px 4px grey;
+    width: 200%;
     padding-top: 0.9rem;
     background-color: white;
-    margin-left: 20%;
 }
 .signIBtnNav:hover{
     cursor: pointer;
 }
 .dropdownRowContainer{
     display: none;
-    /* position: absolute; */
+    position: absolute;
+    margin-left: 55%;
+    padding-left: 2.1rem;
 }
 .closeBtn:hover{
     cursor: pointer;

@@ -11,9 +11,21 @@
         <div class="row">
             @include('header')
         </div>
-        <div class="dropdownRowContainer">
-            @include('acctDropdown')
-        </div>
+        <section class="dropdownRowContainer">
+            <div class="signIBtnNavContainer text-center pb-3">
+                <h5 class="text-right pr-4 closeBtn">X</h5>
+                <hr>
+                <a href="/signup">
+                    <button class="signIBtnNav">SIGN IN</button>
+                </a>
+                <hr>
+                <div class="text-left">
+                    <span class="fa fa-user Icon"></span> My Account
+                    <br><hr>
+                    <span class="fa fa-users Icon"></span> Orders
+                </div>
+            </div>
+        </section>
         {{-- end for header --}}
         <div class="row mt-3">
             <div class="col col-md-1"></div>
