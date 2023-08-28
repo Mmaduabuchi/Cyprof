@@ -14,19 +14,25 @@
         <div class="col"></div>
         <div class="col">
             <h1 class="text-center"><span id="sitename">Cy</span>prof</h1>
-            <form action="post" method="post" id="signupFormContainer">
+            @if (session()->has('success'))
+                <div class="alert alert-success" role="alert">
+                    {{ session()->get('success') }}
+                </div>                
+            @endif
+            <form action="/registeruser" method="POST" id="signupFormContainer">
+                @csrf
                 <h2>Create account</h2>
                 <br>
                 <label><b>Your name</b></label>
-                <input type="text" name="username" id="inputBox" placeholder="Enter your name" class="form-control">
-                <label><b>Your email</b></label>
-                <input type="email" name="useremail" id="inputBox" placeholder="Enter your email" class="form-control">
+                <input type="text" name="username" id="inputBox" placeholder="Enter your name" class="form-control" required>
                 <label><b>Your phone</b></label>
-                <input type="tel" name="usernumber" id="inputBox" placeholder="Enter your phone number" class="form-control">
+                <input type="tel" name="usernumber" id="inputBox" placeholder="Enter your phone number" class="form-control" required>
+                <label><b>Your email</b></label>
+                <input type="email" name="useremail" id="inputBox" placeholder="Enter your email" class="form-control" required>
                 <label><b>Create password</b></label>
-                <input type="password" name="userpassword" id="inputBox" placeholder="At least 6 characters" class="form-control">
+                <input type="password" name="userpassword" id="inputBox" placeholder="At least 6 characters" class="form-control" required>
                 <label><b>Re-enter pasword</b></label>
-                <input type="password" name="re_userpassword" id="inputBox" placeholder="Confirm password" class="form-control">
+                <input type="password" name="re_userpassword" id="inputBox" placeholder="Confirm password" class="form-control" required>
                 <span><b>By creating an account, you agree to Cyprof <a href="#">Terms and Conditions</a></b></span>
                 <br>
                 <hr>

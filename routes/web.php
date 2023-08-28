@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\register;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,9 +25,9 @@ Route::get('/cart', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
-Route::get('/signup', function () {
-    return view('register');
-});
+Route::get('/register', [register::class, 'register'])->name('register');
+Route::post('/registeruser', [register::class, 'registerpost'])->name('register');
+
 Route::get('/signin', function () {
     return view('login');
 });
