@@ -18,55 +18,59 @@
 <body class="bg-light">
     <div class="row">
         <div class="col col-md-2 text-light sideBarContainer">
-            <div class="row">
-                <div class="col-12 p-3">
-                    <h4>ADMIN PANEL</h4>
-                    <hr>
-                </div>
-                <div class="col">
-                    <div class="sidebarTextContainer">
-                        <a href="/admin" class="text-light">
-                            <p><span class="fa fa-dashboard"></span> Dashboard</p>
-                        </a>
+            <section class="headerSectionNavContainer">
+                <div class="row">
+                    <div class="col-12 p-3">
+                        <h4>ADMIN PANEL</h4>
                         <hr>
-                        <p><span class="fa fa-shopping-cart"></span> Orders</p>
-                        <hr>
-                        <p><span class="fa fa-users"></span> Customers</p>
-                        <hr>
-                        <a href="{{ route('upload') }}" class="text-light">
-                            <p><span class="fa fa-upload"></span> Upload products</p>
-                        </a>
-                        <hr>
-                        <p><span class="fa fa-bell"></span> Notifications</p>
-                        <hr>
-                        <p><span class="fa fa-money-check"></span> Payment</p>
-                        <hr>
-                        <p><span class="fa fa-user"></span> Account</p>
-                        <hr>
-                        <p><span class="fa fa-file"></span> Users Report</p>
-                        <hr>
-                        <p><span class="fa fa-cog"></span> Settings</p>
+                    </div>
+                    <div class="col">
+                        <div class="sidebarTextContainer">
+                            <a href="/admin" class="text-light">
+                                <p><span class="fa fa-dashboard"></span> Dashboard</p>
+                            </a>
+                            <hr>
+                            <p><span class="fa fa-shopping-cart"></span> Orders</p>
+                            <hr>
+                            <p><span class="fa fa-users"></span> Customers</p>
+                            <hr>
+                            <a href="{{ route('upload') }}" class="text-light">
+                                <p><span class="fa fa-upload"></span> Upload products</p>
+                            </a>
+                            <hr>
+                            <p><span class="fa fa-bell"></span> Notifications</p>
+                            <hr>
+                            <p><span class="fa fa-money-check"></span> Payment</p>
+                            <hr>
+                            <p><span class="fa fa-user"></span> Account</p>
+                            <hr>
+                            <p><span class="fa fa-file"></span> Users Report</p>
+                            <hr>
+                            <p><span class="fa fa-cog"></span> Settings</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
         <div class="col">
-            <div class="row shadow-sm shadowSmContainer">
-                <div class="col p-3">
-                    <h2>UPLOAD NEW PRODUCTS</h2>
-                </div>
-                <div class="col text-left col-md-5 p-3 shadowSmSidebarContainer">
-                    <div class="row">
-                        <div class="col pt-2 msgNotifContainer">
-                            <span class="fa fa-message"> Message</span>
-                            <span class="fa fa-bell"> Notification</span>
-                        </div>
-                        <div class="col col-md-2 text-center logoutContainer mr-5 bg-danger text-light fw-bold">
-                            <span class="fa fa-sign-out"></span>Logout
+            <section class="headerSectionNavContainer">
+                <div class="row shadow-sm shadowSmContainer">
+                    <div class="col p-3">
+                        <h2>UPLOAD NEW PRODUCTS</h2>
+                    </div>
+                    <div class="col text-left col-md-5 p-3 shadowSmSidebarContainer">
+                        <div class="row">
+                            <div class="col pt-2 msgNotifContainer">
+                                <span class="fa fa-message"> Message</span>
+                                <span class="fa fa-bell"> Notification</span>
+                            </div>
+                            <div class="col col-md-2 text-center logoutContainer mr-5 bg-danger text-light fw-bold">
+                                <span class="fa fa-sign-out"></span>Logout
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
             <div class="row mt-3">
                 <div class="col">
                     <h3>Admin upload</h3>
@@ -74,7 +78,7 @@
                 <div class="col-12">
                     <div class="row mt-5">
                         <div class="col-1"></div>
-                        <div class="col bg-white p-5">
+                        <div class="col bg-white mb-5 p-5">
                             <section>
                                 <form action="" method="post">
                                     <label for="product name">Product name</label>
