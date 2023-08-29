@@ -14,7 +14,25 @@
         <div class="col"></div>
         <div class="col">
             <h1 class="text-center"><span id="sitename">Cy</span>prof</h1>
-            <form action="post" method="post" id="signupFormContainer">
+            @if (session()->has('success'))
+                <div class="alert alert-success" role="alert">
+                    {{ session()->get('success') }}
+                </div>                
+            @endif
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+            @if (session()->has('error'))
+                <div class="alert alert-danger">{{ session('error') }}</div>                
+            @endif
+            <form action="{{ route('loginpost') }}" method="post" id="signupFormContainer">
+                @csrf
                 <h2>Create account</h2>
                 <br>
                 <label><b>Your email</b></label>
@@ -31,7 +49,7 @@
                     <span id="NewToCyprofText">
                         <b>New to Cyprof?</b>
                     </span>
-                    <a href="/signup">
+                    <a href="{{ route('register') }}">
                         <button class="SigninSubmitBtn bg-primary text-light fw-bold mt-3">Create an account</button>
                     </a>
                 </div>

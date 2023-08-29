@@ -10,36 +10,40 @@
     <link rel="stylesheet" href="{{asset("assets/bootstrap-4/css/bootstrap.css")}}">
 </head>
 <body>
-    <div class="row">
+    <div class="row mb-5">
         <div class="col"></div>
         <div class="col">
             <h1 class="text-center"><span id="sitename">Cy</span>prof</h1>
-            @if (session()->has('success'))
-                <div class="alert alert-success" role="alert">
-                    {{ session()->get('success') }}
-                </div>                
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
             @endif
-            <form action="/registeruser" method="POST" id="signupFormContainer">
+            <form action="{{ route('registerpost') }}" method="POST" id="signupFormContainer">
                 @csrf
                 <h2>Create account</h2>
                 <br>
                 <label><b>Your name</b></label>
-                <input type="text" name="username" id="inputBox" placeholder="Enter your name" class="form-control" required>
+                <input type="text" name="username" id="inputBox" placeholder="Enter your name" value="{{ old('username') }}" class="form-control" required>
                 <label><b>Your phone</b></label>
-                <input type="tel" name="usernumber" id="inputBox" placeholder="Enter your phone number" class="form-control" required>
+                <input type="tel" name="phone" id="inputBox" placeholder="Enter your phone number" value="{{ old('phone') }}" class="form-control" required>
                 <label><b>Your email</b></label>
-                <input type="email" name="useremail" id="inputBox" placeholder="Enter your email" class="form-control" required>
+                <input type="email" name="email" id="inputBox" placeholder="Enter your email" value="{{ old('email') }}" class="form-control" required>
                 <label><b>Create password</b></label>
-                <input type="password" name="userpassword" id="inputBox" placeholder="At least 6 characters" class="form-control" required>
+                <input type="password" name="password" id="inputBox" placeholder="At least 6 characters" value="{{ old('password') }}" class="form-control" required>
                 <label><b>Re-enter pasword</b></label>
-                <input type="password" name="re_userpassword" id="inputBox" placeholder="Confirm password" class="form-control" required>
+                <input type="password" name="Confirm_password" id="inputBox" placeholder="Confirm password" class="form-control" required>
                 <span><b>By creating an account, you agree to Cyprof <a href="#">Terms and Conditions</a></b></span>
                 <br>
                 <hr>
                 <input type="submit" value="Continue" class="SignupSubmitBtn">
                 <br>
                 <hr>
-                <span><b>Already have an account? <a href="/signin">Sign in</a></b></span>
+                <span><b>Already have an account? <a href="{{ route('login') }}">Sign in</a></b></span>
                 <br>
             </form>
         </div>

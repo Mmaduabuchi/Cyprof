@@ -16,7 +16,7 @@ use App\Http\Controllers\register;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome.home');
 
 Route::get('/cart', function () {
     return view('cart');
@@ -26,11 +26,11 @@ Route::get('/contact', function () {
     return view('contact');
 });
 Route::get('/register', [register::class, 'register'])->name('register');
-Route::post('/registeruser', [register::class, 'registerpost'])->name('register');
+Route::post('/registerpost', [register::class, 'registerpost'])->name('registerpost');
 
-Route::get('/signin', function () {
-    return view('login');
-});
+Route::get('/signin', [register::class, 'login'])->name('login');
+Route::post('/signin', [register::class, 'loginpost'])->name('loginpost');
+
 Route::get('/customer/account', function () {
     return view('customer.account');
 });
