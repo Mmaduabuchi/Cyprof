@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>admin/message</title>
+    <title>admin uploading page</title>
     <link rel="stylesheet" href="{{asset("assets/fontawesome/css/all.css")}}">
     <link rel="stylesheet" href="{{ asset("assets/style.css") }}">
     <link rel="stylesheet" href="{{asset("assets/bootstrap-4/css/bootstrap.css")}}">
@@ -33,8 +33,8 @@
                         <hr>
                         <p><span class="fa fa-users"></span> Customers</p>
                         <hr>
-                        <a href="/admin/account" class="text-light">
-                            <p><span class="fa fa-message"></span> Messages</p>
+                        <a href="{{ route('upload') }}" class="text-light">
+                            <p><span class="fa fa-upload"></span> Upload products</p>
                         </a>
                         <hr>
                         <p><span class="fa fa-bell"></span> Notifications</p>
@@ -53,7 +53,7 @@
         <div class="col">
             <div class="row shadow-sm shadowSmContainer">
                 <div class="col p-3">
-                    <h2>MESSAGE</h2>
+                    <h2>UPLOAD NEW PRODUCTS</h2>
                 </div>
                 <div class="col text-left col-md-5 p-3 shadowSmSidebarContainer">
                     <div class="row">
@@ -69,7 +69,38 @@
             </div>
             <div class="row mt-3">
                 <div class="col">
-                    <h3>Admin message</h3>
+                    <h3>Admin upload</h3>
+                </div>
+                <div class="col-12">
+                    <div class="row mt-5">
+                        <div class="col-1"></div>
+                        <div class="col bg-white p-5">
+                            <section>
+                                <form action="" method="post">
+                                    <label for="product name">Product name</label>
+                                    <input type="text" name="" placeholder="Enter Name:" class="form-control p-3 w-100">
+                                    <br>
+                                    <label for="product price">Product price</label>
+                                    <input type="text" name="" placeholder="Enter Price:" class="form-control w-100 p-3">
+                                    <br>
+                                    <label for="product image">Product Image</label>
+                                    <input type="file" name="" class="form-control p-3">
+                                    <br>
+                                    <label for="old and new">Old or New Product</label>
+                                    <select name="" class="form-control">
+                                        <option value="New">Brand New</option>
+                                        <option value="Old">Fairly Used</option>
+                                    </select>
+                                    <br>
+                                    <label for="product description">Enter Product Details</label>
+                                    <textarea name="description" id="" placeholder="Describe your product here." cols="30" rows="10" class="form-control"></textarea>
+                                    <br>
+                                    <input type="submit" value="UPLOAD" class="btn btn-primary">
+                                </form>
+                            </section>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
                 </div>
             </div>
         </div>

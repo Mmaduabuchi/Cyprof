@@ -33,8 +33,8 @@
                         <hr>
                         <p><span class="fa fa-users"></span> Customers</p>
                         <hr>
-                        <a href="/admin/account" class="text-light">
-                            <p><span class="fa fa-message"></span> Messages</p>
+                        <a href="{{ route('upload') }}" class="text-light">
+                            <p><span class="fa fa-upload"></span> Upload products</p>
                         </a>
                         <hr>
                         <p><span class="fa fa-bell"></span> Notifications</p>

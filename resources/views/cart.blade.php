@@ -7,9 +7,14 @@
     <title>cart</title>
 </head>
 <body class="bg-light">
-    <div class="row">
-        @include('header')
-    </div>
+    {{-- header --}}
+    <section class="headerSectionNavContainer">
+        <div class="row">
+            @include('header')
+        </div>
+    </section>
+    {{-- end for header --}}
+
     <div class="row mt-3">
         <div class="col ml-5">
             <div class="navigationContainer">
@@ -37,7 +42,9 @@
                 <br><br>
                 <span>Browse our categories and discover our best deals</span>
                 <br><br>
-                <button class="cartBtn">START SHOPPING</button>
+                <a href="{{ route('home') }}">
+                    <button class="cartBtn">START SHOPPING</button>
+                </a>
 
             </div>
         </div>

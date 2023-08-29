@@ -7,9 +7,14 @@
     <title>Contact</title>
 </head>
 <body class="bg-light">
-    <div class="row">
-        @include('header')
-    </div>
+    {{-- header --}}
+    <section class="headerSectionNavContainer">
+        <div class="row">
+            @include('header')
+        </div>
+    </section>
+    {{-- end for header --}}
+    
     <div class="row mt-3">
         <div class="col text-center p-4 contactHelpContainer">
             <h1>NEED HELP?</h1>

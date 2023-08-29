@@ -35,15 +35,32 @@
             </form>
         </div>
         <div class="col cartContainer p-2">
-            <ul>
-                <li class="list" id="accountListBtn"><span class="fa fa-user"></span>Account <span class="fa fa-chevron-down"></span> </li>
-                <li class="list"><span class="fa fa-question-circle"></span>Help</li>
-                <li class="list">
-                    <a href="cart" class="text-dark">
+            <div class="row">
+                <div class="col linknavcontainer pt-2">
+                    <a href="{{ route('dashboard') }}">
+                        <span class="fa fa-user"></span>Account 
+                    </a>
+                    |
+                    <a href="">
+                        <span class="fa fa-question-circle"></span>Help
+                    </a>
+                    |
+                    <a href="{{ route('cart') }}">
                         <span class="fa fa-shopping-cart"></span>Cart
                     </a>
-                </li>
-            </ul>
+                </div>
+                <div class="col col-md-4">
+                    @auth
+                        <a href="{{ route('logout') }}">
+                            <button class="signIBtnNav">LOG OUT</button>
+                        </a>
+                    @else                       
+                        <a href="{{ route('login') }}">
+                            <button class="signIBtnNav">SIGN IN</button>
+                        </a>
+                    @endauth
+                </div>
+            </div>
         </div>
     </div>
     {{-- navigation bars section --}}

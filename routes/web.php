@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\register;
+use App\Http\Controllers\usersdashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,11 +17,11 @@ use App\Http\Controllers\register;
 
 Route::get('/', function () {
     return view('welcome');
-})->name('welcome.home');
+})->name('home');
 
 Route::get('/cart', function () {
     return view('cart');
-});
+})->name('cart');
 
 Route::get('/contact', function () {
     return view('contact');
@@ -31,12 +32,11 @@ Route::post('/registerpost', [register::class, 'registerpost'])->name('registerp
 Route::get('/signin', [register::class, 'login'])->name('login');
 Route::post('/signin', [register::class, 'loginpost'])->name('loginpost');
 
-Route::get('/customer/account', function () {
-    return view('customer.account');
-});
+Route::get('/logout', [register::class, 'logout'])->name('logout');
+
+Route::get('/customer/account', [usersdashboard::class, 'dashboard'])->name('dashboard');
+
 Route::get('/admin', function () {
     return view('admin.admin');
 });
-Route::get('/admin/account', function () {
-    return view('admin.account');
-});
+Route::get('/admin/upload', [usersdashboard::class, 'upload'])->name('upload');

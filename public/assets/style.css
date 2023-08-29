@@ -17,16 +17,6 @@ ul{
     border-radius: 0.2rem;
     border: none;
 }
-#accountListBtn{
-    border: 2px solid grey;
-    padding: 0.3rem;
-    border-radius: 0.2rem;
-    background-color: grey;
-    color: white;
-    font-weight: bold;
-    width: 30%;
-    text-align: center;
-}
 #accountListBtn:active{
     border: 3px solid orange;
 }
@@ -121,7 +111,18 @@ a{
     border-radius: 0.2rem;
     border: none;
     box-shadow: 2px 2px 6px grey;
-    width: 55%;
+    width: 100%;
+}
+.linknavcontainer a{
+    margin-right: 4%;
+    color: black;
+}
+.linknavcontainer a:hover{
+    color: rgb(185, 139, 54);
+}
+.linknavcontainer span{
+    margin-right: 3%;
+    margin-left: 3%;
 }
 .signIBtnNavContainer{
     border: 2px solid;
@@ -266,4 +267,10 @@ a{
 .msgNotifContainer span:hover{
     cursor: pointer;
     color: grey;
+}
+.headerSectionNavContainer{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
