@@ -79,27 +79,54 @@
                     <div class="row mt-5">
                         <div class="col-1"></div>
                         <div class="col bg-white mb-5 p-5">
+                            @if (session()->has('success'))
+                                <div class="alert alert-success" role="alert">
+                                    {{ session()->get('success') }}
+                                </div>                
+                            @endif
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
                             <section>
-                                <form action="" method="post">
+                                <form action="{{ route('store') }}" method="post" enctype="multipart/form-data">
+                                    @csrf
                                     <label for="product name">Product name</label>
-                                    <input type="text" name="" placeholder="Enter Name:" class="form-control p-3 w-100">
+                                    <input type="text" name="productname" placeholder="Enter Name:" class="form-control p-3 w-100" required>
                                     <br>
                                     <label for="product price">Product price</label>
-                                    <input type="text" name="" placeholder="Enter Price:" class="form-control w-100 p-3">
+                                    <input type="text" name="productprice" placeholder="Enter Price:" class="form-control w-100 p-3" required>
                                     <br>
                                     <label for="product image">Product Image</label>
-                                    <input type="file" name="" class="form-control p-3">
+                                    <input type="file" name="productimage" class="form-control p-3" required>
                                     <br>
                                     <label for="old and new">Old or New Product</label>
-                                    <select name="" class="form-control">
+                                    <select name="productbrand" class="form-control">
                                         <option value="New">Brand New</option>
                                         <option value="Old">Fairly Used</option>
                                     </select>
                                     <br>
-                                    <label for="product description">Enter Product Details</label>
-                                    <textarea name="description" id="" placeholder="Describe your product here." cols="30" rows="10" class="form-control"></textarea>
+                                    <label for="Product Categories">Product Categories</label>
+                                    <select name="productcategories" class="form-control">
+                                        <option value="Fashion">Fashion</option>
+                                        <option value="Electronics">Electronics</option>
+                                        <option value="Babies">Babies</option>
+                                        <option value="Gaming">Gaming</option>
+                                        <option value="Appliances">Appliances</option>
+                                        <option value="Health">Health</option>
+                                        <option value="Phone">Phone</option>
+                                        <option value="Computing">Computing</option>
+                                    </select>
                                     <br>
-                                    <input type="submit" value="UPLOAD" class="btn btn-primary">
+                                    <label for="product description">Enter Product Details</label>
+                                    <textarea name="productdescription" id="" placeholder="Describe your product here." cols="30" rows="10" class="form-control"></textarea>
+                                    <br>
+                                    <input type="submit" value="UPLOAD PRODUCT" class="btn btn-primary w-100 p-3">
                                 </form>
                             </section>
                         </div>

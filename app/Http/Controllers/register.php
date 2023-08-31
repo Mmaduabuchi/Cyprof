@@ -7,6 +7,9 @@ use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rules\Password;
+
+use function Laravel\Prompts\password;
 
 class register extends Controller
 {
@@ -21,7 +24,7 @@ class register extends Controller
             'username' => 'required|string|max:100',
             'phone' => 'required|numeric',
             'email' => 'required|unique:users|email|max:100',
-            'password' => 'required_with:Confirm_password|same:Confirm_password|min:8|max:15',
+            'password' => ['required_with:Confirm_password', 'same:Confirm_password', Password::min(8)->letters()->mixedCase()->numbers()->symbols()],
             'Confirm_password' => '',
         ]);
 
@@ -30,6 +33,7 @@ class register extends Controller
             'email' => $request->email,
             'phone' => $request->phone,
             'password' => Hash::make($request->password),
+            'role' => 'guest',
 
         ]);
         if (!$user) {
@@ -42,18 +46,23 @@ class register extends Controller
     }
     public function loginpost(Request $request){
         $request->validate([
-            'useremail' => 'required',
-            'userpassword' => 'required',
+            'email' => 'required',
+            'password' => 'required',
         ]);
+
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
+            if (auth()->user()->role == 'admin') {
+                # code...
+                return redirect()->intended(route('adminpage'));
+            }
             return redirect()->intended(route('home'));
         }
         return redirect(route('login'))->with('error', 'Email or Password incorrect.');
     }
 
     public function logout(){
-        Session::flush();
+        Session()->flush();
         Auth::logout();
         return redirect(route('login'));
     }

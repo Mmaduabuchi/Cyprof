@@ -38,5 +38,6 @@ Route::get('/customer/account', [usersdashboard::class, 'dashboard'])->name('das
 
 Route::get('/admin', function () {
     return view('admin.admin');
-});
+})->name('adminpage');
 Route::get('/admin/upload', [usersdashboard::class, 'upload'])->name('upload');
+Route::post('/admin/upload', [usersdashboard::class, 'storeproducts'])->name('store');

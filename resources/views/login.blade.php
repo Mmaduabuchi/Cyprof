@@ -36,9 +36,9 @@
                 <h2>Create account</h2>
                 <br>
                 <label><b>Your email</b></label>
-                <input type="email" name="useremail" id="inputBox" placeholder="Enter your email" class="form-control">
+                <input type="email" name="email" id="inputBox" placeholder="Enter your email" class="form-control">
                 <label><b>Enter password</b></label>
-                <input type="password" name="userpassword" id="inputBox" placeholder="At least 6 characters" class="form-control">
+                <input type="password" name="password" id="inputBox" placeholder="At least 6 characters" class="form-control">
                 <span><b>By continuing, you agree to Cyprof <a href="#">Terms and Conditions</a></b></span>
                 <br>
                 <input type="submit" value="Continue" class="SignupSubmitBtn">

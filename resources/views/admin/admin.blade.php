@@ -65,7 +65,9 @@
                             <span class="fa fa-bell"> Notification</span>
                         </div>
                         <div class="col col-md-2 text-center logoutContainer mr-5 bg-danger text-light fw-bold">
-                            <span class="fa fa-sign-out"></span>Logout
+                            <a href="{{ route('logout') }}" class="text-light">
+                                <span class="fa fa-sign-out"></span>Logout
+                            </a>
                         </div>
                     </div>
                 </div>
