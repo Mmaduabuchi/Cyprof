@@ -34,8 +34,33 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col"></div>
-                <div class="col"></div>
+                <div class="col">h</div>
+                <div class="col">h</div>
+            </div>
+        </section>
+        <section class="mt-3">
+            <div class="row">
+                <div class="col col-md-1"></div>
+                <div class="col goodsContainer bg-white">
+                    <div class="row p-3">
+                        <div class="topDealTextContainer col-12">
+                            <h2>Top Deals</h2>
+                        </div>
+                        @foreach ($products as $productItem)
+                            <div class="col col-md-3 mt-2 shadow-lg">
+                                <div class="d-flex p-2 flex-column">
+                                    <img src="{{ asset('storage/'.$productItem['productimage']) }}" alt="product image" class="w-100">
+                                    <span>{{ $productItem['productname'] }}</span>
+                                    <span><b>N {{ $productItem['productprice'] }}</b></span>
+                                    <p>{{ $productItem['productdescription'] }}</p>
+                                    <button class="btn text-light btnAddToCart ">ADD TO CART</button>
+                                </div>
+                            </div>
+                            <br><br>
+                        @endforeach
+                    </div>
+                </div>
+                <div class="col col-md-1"></div>
             </div>
         </section>
         {{-- footer --}}

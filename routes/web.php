@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\register;
 use App\Http\Controllers\usersdashboard;
+use App\Http\Controllers\admin;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +16,7 @@ use App\Http\Controllers\usersdashboard;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/', [usersdashboard::class, 'display'])->name('home');
 
 Route::get('/cart', function () {
     return view('cart');
@@ -34,10 +33,13 @@ Route::post('/signin', [register::class, 'loginpost'])->name('loginpost');
 
 Route::get('/logout', [register::class, 'logout'])->name('logout');
 
-Route::get('/customer/account', [usersdashboard::class, 'dashboard'])->name('dashboard');
+Route::get('/admin', [admin::class, 'admin'])->name('adminpage');
 
-Route::get('/admin', function () {
-    return view('admin.admin');
-})->name('adminpage');
+Route::group(['middleware' => 'auth'], function (){
+    //uses dashboard route page
+    Route::get('/customer/account', [usersdashboard::class, 'dashboard'])->name('dashboard');
+
+});
+//admin panel route page
 Route::get('/admin/upload', [usersdashboard::class, 'upload'])->name('upload');
 Route::post('/admin/upload', [usersdashboard::class, 'storeproducts'])->name('store');

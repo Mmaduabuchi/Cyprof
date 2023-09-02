@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 use App\Models\products;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class usersdashboard extends Controller
 {
@@ -14,9 +15,19 @@ class usersdashboard extends Controller
     }
     //uploading products page
     public function upload(){
-        return view('admin.upload');
+        if (Auth::check()) {
+            if(auth()->user()->role == 'admin'){
+                return view('admin.upload');
+            }else{
+                return redirect()->route('home');
+            }
+        }
+        return view('login');
     }
-    public function display(){}
+    public function display(){
+        $productsData = products::all();
+        return view('welcome', ['products' => $productsData]);
+    }
 
     public function storeproducts(Request $request): RedirectResponse
     {

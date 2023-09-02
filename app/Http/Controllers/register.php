@@ -9,12 +9,13 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules\Password;
 
-use function Laravel\Prompts\password;
-
 class register extends Controller
 {
     //registration page return
     public function register(){
+        if (Auth::check()) {
+            return redirect()->route('home');
+        }
         return view('register');
     }
     //get and register users
@@ -42,6 +43,9 @@ class register extends Controller
         return redirect()->route('login')->with('success', value: 'You have successfully been registered.');
     }
     public function login(){
+        if (Auth::check()) {
+            return redirect()->route('login');
+        }
         return view('login');
     }
     public function loginpost(Request $request){
