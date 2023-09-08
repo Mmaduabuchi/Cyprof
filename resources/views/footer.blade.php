@@ -31,7 +31,9 @@
                             <b>NEED HELP?</b>
                         </li>
                         <br>
-                        <li>Help Center</li>
+                        <li>
+                            <a href="{{ route('help') }}" class="text-light">Help Center</a>
+                        </li>
                         <li>
                             <a href="contact" class="text-light">Contact Us</a>
                         </li>
@@ -43,7 +45,9 @@
                             <b>ABOUT CYPROF</b>
                         </li>
                         <br>
-                        <li>About Us</li>
+                        <li>
+                            <a href="{{ route('about') }}" class="text-light">About Us</a>
+                        </li>
                         <li>Trems and Conditions</li>
                         <li>Privacy Notice</li>
                     </ul>

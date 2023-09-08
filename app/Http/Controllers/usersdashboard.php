@@ -13,6 +13,13 @@ class usersdashboard extends Controller
     public function dashboard(){
         return view('customer.account');
     }
+    //user setting page route
+    public function settings(){
+        return view('customer.settings');
+    }
+    public function orders(){
+        return view('customer.orders');
+    }
     //uploading products page
     public function upload(){
         if (Auth::check()) {

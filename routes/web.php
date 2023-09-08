@@ -25,6 +25,13 @@ Route::get('/cart', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+Route::get('/help', function () {
+    return view('help');
+})->name('help');
+Route::get('/about', function () {
+    return view('about-us');
+})->name('about');
+
 Route::get('/register', [register::class, 'register'])->name('register');
 Route::post('/registerpost', [register::class, 'registerpost'])->name('registerpost');
 
@@ -38,6 +45,8 @@ Route::get('/admin', [admin::class, 'admin'])->name('adminpage');
 Route::group(['middleware' => 'auth'], function (){
     //uses dashboard route page
     Route::get('/customer/account', [usersdashboard::class, 'dashboard'])->name('dashboard');
+    Route::get('/customer/settings', [usersdashboard::class, 'settings'])->name('settings');
+    Route::get('/customer/orders', [usersdashboard::class, 'orders'])->name('orders');
 
 });
 //admin panel route page

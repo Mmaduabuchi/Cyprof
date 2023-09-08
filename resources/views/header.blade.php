@@ -41,7 +41,7 @@
                         <span class="fa fa-user"></span>Account 
                     </a>
                     |
-                    <a href="">
+                    <a href="{{ route('help') }}">
                         <span class="fa fa-question-circle"></span>Help
                     </a>
                     |

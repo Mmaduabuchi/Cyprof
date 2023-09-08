@@ -33,6 +33,13 @@ li:hover{
     border-radius: 0.3rem;
     padding-left: 1.5%;
 }
+.navigationContainerUlUserPage{
+    background-color: white;
+    font-weight: bold;
+    width: 80%;
+    border-radius: 0.3rem;
+    padding-left: 1.5%;
+}
 #sitename{
     color: orange;
 }
@@ -43,8 +50,39 @@ li:hover{
     color: orange;
     font-weight: bold;
 }
+.listNavBarUserPage{
+    margin-bottom: 5%;
+    background-color: rgb(13, 121, 31);
+    padding: 1rem;
+    color: white;
+    margin-left: -2%;
+}
+/* .listNavBarUserPage:hover{
+    color: orange;
+    font-weight: bold;
+} */
+.userpagelink{
+    color: black;
+}
+.userpagelink:hover{
+    color: orange;
+    text-decoration: none;
+}
 .Icon{
     margin-right: 4%;
+}
+.settingsBox{
+    border: 2px solid rgb(180, 180, 180);
+    border-radius: 0.2rem;
+    box-shadow: -1px 2px 6px grey;
+}
+.settingsBox span{
+    font-weight: bold;
+    color: rgb(94, 94, 94);
+}
+.settingsBox span:hover{
+    cursor: pointer;
+    color: black;
 }
 footer{
     padding-top: 1rem;
