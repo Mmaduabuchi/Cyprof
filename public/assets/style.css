@@ -1,0 +1,442 @@
+input[type=text]{
+    width: 70%;
+    padding: 0.4rem;
+}
+ul{
+    list-style-type: none;
+}
+.list{
+    display: inline-block;
+    margin-right: 10%;
+}
+.btnSubmit{
+    padding: 0.5rem;
+    background-color: orange;
+    font-weight: bold;
+    color: white;
+    border-radius: 0.2rem;
+    border: none;
+}
+#accountListBtn:active{
+    border: 3px solid orange;
+}
+li:hover{
+    cursor: pointer;
+}
+/* .navigationContainer{
+
+} */
+.navigationContainerUl{
+    background-color: white;
+    font-weight: bold;
+    width: 60%;
+    border-radius: 0.3rem;
+    /* padding-left: 1.5%; */
+    padding: 3%;
+}
+.navigationContainerUl a{
+    text-decoration: none;
+    color: rgb(190, 189, 188);
+    font-size: 13px;
+}
+.HomeContactContainer{
+    color: black;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 80%;
+}
+.navigationContainerUlUserPage{
+    background-color: white;
+    font-weight: bold;
+    width: 80%;
+    border-radius: 0.3rem;
+    padding-left: 1.5%;
+}
+#sitename{
+    color: orange;
+}
+.listNavBar{
+    margin-bottom: 5%;
+}
+.listNavBar:hover{
+    color: orange;
+    font-weight: bold;
+}
+.listNavBarUserPage{
+    margin-bottom: 5%;
+    background-color: rgb(13, 121, 31);
+    padding: 1rem;
+    color: white;
+    margin-left: -2%;
+}
+/* .listNavBarUserPage:hover{
+    color: orange;
+    font-weight: bold;
+} */
+.userpagelink{
+    color: black;
+}
+.userpagelink:hover{
+    color: orange;
+    text-decoration: none;
+}
+.Icon{
+    margin-right: 4%;
+}
+.settingsBox{
+    border: 2px solid rgb(180, 180, 180);
+    border-radius: 0.2rem;
+    box-shadow: -1px 2px 6px grey;
+}
+.settingsBox span{
+    font-weight: bold;
+    color: rgb(94, 94, 94);
+}
+.settingsBox span:hover{
+    cursor: pointer;
+    color: black;
+}
+footer{
+    padding-top: 1rem;
+    color: white;
+}
+.firstFooterContainer{
+    background-color: black;
+}
+#footerSitename{
+    color: white;
+}
+.containerFooter{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.footerLastRow{
+    background-color: rgb(19, 18, 18);
+}
+.lastFooterList{
+    width: 50%;
+}
+.lastFooterList2{
+    margin-left: -50%;
+}
+#paymentsIcon{
+    width: 40%;
+}
+.cartContainer2{
+    padding: 5rem;
+    background-color: white;
+    border-radius: 0.3rem;
+    box-shadow: 2px 2px 6px grey;
+}
+.cartBtn{
+    padding: 0.5rem;
+    background-color: orange;
+    font-weight: bold;
+    color: white;
+    border-radius: 0.2rem;
+    border: none;
+    box-shadow: 2px 2px 6px grey;
+}
+.cartBtn:hover{
+    cursor: pointer;
+}
+.cartpageIcon{
+    font-size: 3rem;
+}
+.contactHelpContainer{
+    background-color: orange;
+    color: white;
+}
+.headerContainer{
+    background-color: white;
+}
+a{
+    text-decoration: none;
+}
+.signIBtnNav{
+    padding: 0.5rem;
+    background-color: orange;
+    font-weight: bold;
+    color: white;
+    border-radius: 0.2rem;
+    border: none;
+    box-shadow: 2px 2px 6px grey;
+    width: 100%;
+}
+.linknavcontainer a{
+    margin-right: 4%;
+    color: black;
+}
+.linknavcontainer a:hover{
+    color: rgb(185, 139, 54);
+}
+.linknavcontainer span{
+    margin-right: 3%;
+    margin-left: 3%;
+}
+.signIBtnNavContainer{
+    border: 2px solid;
+    border: none;
+    border-radius: 0.3rem;
+    box-shadow: -1px 2px 4px grey;
+    width: 200%;
+    padding-top: 0.9rem;
+    background-color: white;
+}
+.signIBtnNav:hover{
+    cursor: pointer;
+}
+.dropdownRowContainer{
+    display: none;
+    position: absolute;
+    margin-left: 55%;
+    padding-left: 2.1rem;
+}
+.closeBtn:hover{
+    cursor: pointer;
+    text-shadow: -2px 1px 7px grey;
+}
+#inputBox{
+    margin-bottom: 5%;
+}
+#signupFormContainer{
+    border: 2px solid;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 6px grey;
+    padding: 1rem;
+    margin-top: 10%;
+}
+.SignupSubmitBtn{
+    background-color: orange;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    box-shadow: 2px 2px 6px grey;
+    border: none;
+}
+.SigninSubmitBtn{
+    background-color: orange;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    box-shadow: 2px 2px 6px grey;
+    border: none;
+}
+.SigninSubmitBtn:hover{
+    cursor: pointer;
+}
+.SigninSubmitBtn:hover{
+    cursor: pointer;
+}
+#NewToCyprofText{
+    color: rgb(233, 172, 58);
+}
+/* admin style */
+.sideBarContainer{
+    background-color: rgb(9, 25, 114);
+}
+.sidebarTextContainer p{
+    padding-left: 10%;
+}
+.sidebarTextContainer p:hover{
+    cursor: pointer;
+    background-color: rgb(71, 71, 212);
+    font-weight: bolder;
+    padding: 1rem;
+}
+/* #inputSearchboxAdmin{
+    width: 50%;
+    font-weight: bolder;
+    font-family: jokerman;
+    padding: 0.6rem;
+    border: 2px solid rgb(9, 25, 114);
+} */
+/* #inputSubmitBtnAdmin{ */
+    /* padding: 0.6rem;
+    border: 1px solid rgb(9, 25, 114);
+    border-bottom: 3px solid rgb(9, 25, 114);
+    background-color: rgb(9, 25, 114);
+    color: white;
+    margin-left: -0.3%;
+} */
+/* #inputSubmitBtnAdmin:hover{
+    cursor: pointer;
+    background-color: rgb(9, 32, 161);
+} */
+.shadowSmContainer{
+    background-color: white;
+}
+.shadowSmSidebarContainer span{
+    margin-right: 5%;
+}
+.containerBox1{
+    border-left: 4px solid rgb(9, 32, 161);
+    padding: 0.8rem;
+    border-radius: 0.2rem;
+    box-shadow: -1px 2px 6px grey;
+}
+.containerBox1Text{
+    color: rgb(9, 32, 161);
+    font-weight: bold;
+}
+.containerBox2{
+    border-left: 4px solid orange;
+    padding: 0.8rem;
+    border-radius: 0.2rem;
+    box-shadow: -1px 2px 6px grey;
+}
+.containerBox2Text{
+    color: orange;
+    font-weight: bold;
+}
+.containerBox3{
+    border-left: 4px solid rgb(6, 158, 6);
+    padding: 0.8rem;
+    border-radius: 0.2rem;
+    box-shadow: -1px 2px 6px grey;
+}
+.containerBox3Text{
+    color: rgb(6, 158, 6);
+    font-weight: bold;
+}
+.containerBox4{
+    border-left: 4px solid purple;
+    padding: 0.8rem;
+    border-radius: 0.2rem;
+    box-shadow: -1px 2px 6px grey;
+}
+.containerBox4Text{
+    color: purple;
+    font-weight: bold;
+}
+.logoutContainer:hover{
+    cursor: pointer;
+    border: 2px solid red;
+}
+.msgNotifContainer span:hover{
+    cursor: pointer;
+    color: grey;
+}
+.headerSectionNavContainer{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.goodsContainer{    
+    box-shadow: -1px 2px 6px grey;
+}
+.topDealTextContainer{
+    background-color: orange;
+    color: white;
+}
+.topDealTextContainer2{
+    background-color: rgb(160, 66, 160);
+    color: white;
+    padding: 1rem;
+}
+.topDealTextContainer3{
+    background-color: purple;
+    color: white;
+    padding: 1rem;
+}
+.topDealTextContainer4{
+    background-color: rgb(196, 168, 75);
+    color: white;
+    padding: 1rem;
+}
+.topDealTextContainer5{
+    background-color: rgb(216, 186, 86);
+    color: white;
+    padding: 1rem;
+}
+.btnAddToCart{    
+    background-color: orange;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    border: none;
+    font-weight: bolder;
+}
+.cyprofExpress{
+    font-size: small;
+}
+/* .productsItemsContainer{
+    box-shadow: 2px 2px 8px rgb(146, 146, 146);
+} */
+.productsItemsContainer:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px 20px rgb(253, 228, 180);
+}
+a:hover{
+    text-decoration: none;
+    color: black;
+}
+.itemDescriptionContainer{
+    background-color: white;
+    box-shadow: 1px 1px 4px orange;
+    border-radius: 0.5rem;
+}
+.itemDescriptionInnerContainer{
+    border-bottom: 1px solid gray;
+    padding: 0.3rem;
+}
+.TxtDetailsHolder{
+    padding: 0.2rem;
+    border-radius: 0.3rem;
+}
+.divPriceContainer{
+    border: 2px solid red;
+}
+.divPriceInnerContainer{
+    background-color: red;
+    color: white;
+}
+.btnAddToCartItem{
+    background-color: orange;
+    color: white;
+    width: 100%;
+}
+.gridItemImageContainer{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.gridItemImage{
+    width: 50%;
+    border: 1px solid orange;
+}
+.gridItemImage:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 4px orange;
+}
+.heartIcon, .fa-star{
+    color: orange;
+}
+#Anambra, #Rivers, #Enugu, #Imo{
+    display: none;
+}
+.HomeBg{
+    background-color: rgb(253, 186, 63);
+}
+progress{
+    width: 99%;
+    height: 8px;
+    -webkit-appearance: none;
+    /* border-radius: 90px; */
+}
+progress::-webkit-progress-bar{
+    background-color: rgb(197, 196, 196);
+    border-radius: 90px;
+}
+progress::-webkit-progress-value{
+    background-color: orange;
+    border-radius: 90px;
+}
+#productpageImage{
+    width: 100%;
+}
+.addItemNumberContainer{
+    display: none;
+}
