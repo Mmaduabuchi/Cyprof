@@ -71,4 +71,4 @@ Route::get('/Sporting-Goods', [products::class, 'SportingGoods'])->name('Sportin
 
 //Add to cart route
 
-Route::post('/addtocart', [addtocart::class, ''])->name('addtocart');
+Route::post('/addtocart', [addtocart::class, 'addtocart'])->name('addtocart');

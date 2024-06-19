@@ -54,11 +54,13 @@ function State() {
 var minusBtn = document.querySelector("#minusBtn");
 var addBtn = document.querySelector("#addBtn");
 var answer = document.querySelector("#answer");
+var productsQuantity = document.querySelector("#productsQuantity");
 
 minusBtn.addEventListener("click", function(){
     let data = parseInt(answer.value);
     let UpdateData = data - 1;
     answer.value = UpdateData;
+    productsQuantity.value = UpdateData;
     if (data < 2) {
         minusBtn.disabled = true;
     }
@@ -68,6 +70,7 @@ addBtn.addEventListener("click", function(){
     let data = parseInt(answer.value);
     let UpdateData = data + 1;
     answer.value = UpdateData;
+    productsQuantity.value = UpdateData;
     if (data > -1) {
         minusBtn.disabled = false;
     }
@@ -78,4 +81,25 @@ var addItemNumberContainer = document.querySelector(".addItemNumberContainer");
 
 btnAddToCartItem.addEventListener("click", function () {
     addItemNumberContainer.style.display = "block";
-})
+});
+
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+
+$(document).ready(function () {
+    var addToCartSubmitBtn = document.querySelector("#addToCartSubmitBtn");
+    addToCartSubmitBtn.addEventListener("click", function(){
+        $("#addtocartFromContainer").on("submit", function (event) {
+            event.preventDefault();
+            const data = $(this).serialize();
+            $.post("addtocart", data).done(function(response){
+                $("#exampleModalCenter").modal('toggle');
+            }).fail(function(error){
+                console.log(error);
+            });
+        });
+    });    
+});

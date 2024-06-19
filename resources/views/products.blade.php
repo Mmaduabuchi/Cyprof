@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Cyprof Products</title>
 </head>
 <body class="bg-light">
@@ -61,49 +63,61 @@
                                 <span> + Shipping From Cyprof</span>
                                 <button class="btn btnAddToCartItem mt-1">ADD TO CART</button>
                                 <div class="mt-2 text-center addItemNumberContainer">
-                                    <div class="row">
-                                        <div class="col text-end">
-                                            <button class="btn btn-info w-100" id="minusBtn">-</button>
+                                    <!-- <form action="{{ route('addtocart') }}" id="addtocartFromContainer" method="post">
+                                        @csrf -->
+                                        <div class="row">
+                                            <div class="col text-end">
+                                                <button class="btn btn-info w-100" id="minusBtn">-</button>
+                                            </div>
+                                            <div class="col text-center">
+                                                <input type="text" class="form-control w-100" value="1" id="answer" name="answer" disabled>
+                                            </div>
+                                            <div class="col text-start">
+                                                <button class="btn btn-info w-100" id="addBtn">+</button>
+                                            </div>
                                         </div>
-                                        <div class="col text-center">
-                                            <input type="text" class="form-control w-100" value="1" id="answer" disabled>
-                                        </div>
-                                        <div class="col text-start">
-                                            <button class="btn btn-info w-100" id="addBtn">+</button>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col text-left">
-                                            <!-- Button trigger modal -->
-                                            <button class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">Add Item To Cart <i class="fa fa-shopping-cart"></i></button>
-                                        </div>
-                                        <div class="col text-right">
-                                            <button class="btn btn-primary">Proceed To Checkout <i class="fa fa-credit-card"></i></button>
-                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col text-left">
+                                                <!-- Button trigger modal -->
+                                                <!-- <button class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">Add Item To Cart <i class="fa fa-shopping-cart"></i></button> -->
+                                                
+                                                <form name="addtocartFromContainer" id="addtocartFromContainer">
+                                                    <!-- @csrf -->
+                                                    <input type="hidden" name="InputproductIDCode" id="productIDCode" value="{{ $item->id }}">
+                                                    <input type="hidden" name="productsQuantity" id="productsQuantity" value="1">
+                                                    <button class="btn btn-success" id="addToCartSubmitBtn">Add Item To Cart <i class="fa fa-shopping-cart"></i></button>
+                                                </form>
+                                            </div>
+                                            <div class="col text-right">
+                                                <button class="btn btn-primary">Proceed To Checkout <i class="fa fa-credit-card"></i></button>
+                                            </div>
 
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered" role="document">
-                                            <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLongTitle">Item Added To Cart</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                                </button>
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLongTitle">Item Added To Cart</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <span class="text-success">You have successfully added item to your cart.</span>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    <a href="{{ route('cart') }}">
+                                                        <button type="button" class="btn btn-primary">Proceed to Cart</button>
+                                                    </a>
+                                                </div>
+                                                </div>
                                             </div>
-                                            <div class="modal-body">
-                                                <span class="text-success">You have successfully added item to your cart.</span>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                <a href="{{ route('cart') }}">
-                                                    <button type="button" class="btn btn-primary">Proceed to Cart</button>
-                                                </a>
-                                            </div>
-                                            </div>
-                                        </div>
                                         </div>
                                     </div>
+
+                                    <!-- </form> -->
+                                    
                                 </div>
                                 <hr>
                                 <span><b>PROMOTIONS</b></span>

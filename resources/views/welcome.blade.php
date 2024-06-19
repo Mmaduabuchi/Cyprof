@@ -195,7 +195,7 @@
                                         <progress value="60" max="100"></progress>
                                         <p> <b>CYPROF</b><i class="fa fa-wind"></i><span style="font-weight: bold; color: orange;">EXPRESS</span></p>
                                     </a>
-                                    <button class="btn text-light btnAddToCart ">ADD TO CART</button>
+                                    <!-- <button class="btn text-light btnAddToCart ">ADD TO CART</button> -->
                                 </div>
                             </div>
                             <br><br>
@@ -233,7 +233,6 @@
                                         <progress value="30" max="100"></progress>
                                         <p> <b>CYPROF</b><i class="fa fa-wind"></i><span style="font-weight: bold; color: orange;">EXPRESS</span></p>
                                     </a>
-                                    <button class="btn text-light btnAddToCart ">ADD TO CART</button>
                                 </div>
                             </div>
                             <br><br>
