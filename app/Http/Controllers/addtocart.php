@@ -10,6 +10,11 @@ use App\Models\products;
 class addtocart extends Controller
 {
     //
+    public function cart(){
+        $cartsData = DB::select('SELECT * FROM addtocartproducts');
+        return view('cart', ['cartsData' => $cartsData]);
+    }
+
     public function addtocart(Request $request){
         $InputproductIDCode = $request->InputproductIDCode;
         $productsQuantity = $request->productsQuantity;

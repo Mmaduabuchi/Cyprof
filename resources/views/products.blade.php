@@ -66,6 +66,11 @@
                                     <!-- <form action="{{ route('addtocart') }}" id="addtocartFromContainer" method="post">
                                         @csrf -->
                                         <div class="row">
+                                            <div class="col text-left">
+                                                <span>Add Product Quantity:</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
                                             <div class="col text-end">
                                                 <button class="btn btn-info w-100" id="minusBtn">-</button>
                                             </div>

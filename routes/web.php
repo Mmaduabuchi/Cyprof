@@ -9,10 +9,6 @@ use App\Http\Controllers\addtocart;
 
 Route::get('/', [usersdashboard::class, 'display'])->name('home');
 
-Route::get('/cart', function () {
-    return view('cart');
-})->name('cart');
-
 Route::get('/contact', function () {
     return view('contact');
 });
@@ -71,4 +67,6 @@ Route::get('/Sporting-Goods', [products::class, 'SportingGoods'])->name('Sportin
 
 //Add to cart route
 
+Route::get('/cart', [addtocart::class, 'cart'])->name('cart');
 Route::post('/addtocart', [addtocart::class, 'addtocart'])->name('addtocart');
+

@@ -53,20 +53,63 @@
             </div>
         </div>
         <div class="col col-md-7">
-            <div class="cartContainer2 text-center">
-                <i class="fa fa-shopping-cart cartpageIcon"></i>
-                <br>
-                <span>
-                    <b>Your cart is empty!</b>
-                </span>
-                <br><br>
-                <span>Browse our categories and discover our best deals</span>
-                <br><br>
-                <a href="{{ route('home') }}">
-                    <button class="cartBtn">START SHOPPING</button>
-                </a>
+            <!-- <div class="cartContainer2 text-center"> -->
+                @if ($cartsData == "")
+                    <div class="cartContainer2 text-center">
+                        <i class="fa fa-shopping-cart cartpageIcon"></i>
+                        <br>
+                        <span>
+                            <b>Your cart is empty!</b>
+                        </span>
+                        <br><br>
+                        <span>Browse our categories and discover our best deals</span>
+                        <br><br>
+                        <a href="{{ route('home') }}">
+                            <button class="cartBtn">START SHOPPING</button>
+                        </a>      
+                    </div>              
+                @else
+                    <div class="cartContainer2inner">
+                        <h4>Your Cart</h4>
+                        <hr>
+                        @foreach ($cartsData as $Data)
+                            <div class="row mr-1 ml-1 mb-2 cartContainerInnerBox">
+                                <div class="col">
+                                    <img src="{{ asset('storage/'.$Data->productimage) }}" alt="product icon" style="width: 50%;">
+                                </div>
+                                <div class="col-7">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5 style="color: orange;">{{ $Data->productname }}</h5>
+                                            <h6>N {{ $Data->productprice }}</h6>
+                                            <span>In stock</span>
+                                        </div>
+                                        <div class="col">
+                                            <h5>{{ $Data->productamount }} items</h5>
+                                            <span class="cartContainerInnerBoxSpanText">Added on: {{ $Data->created_at }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="row">
+                                        <div class="col-12 p-2"></div>
+                                        <div class="col-12">
+                                            <button class="btn btn-danger"> <i class="fa fa-trash"></i> Remove Item</button>
+                                        </div>
+                                        <div class="col-12 p-2"></div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        @endforeach
+                        <div class="row">
+                            <div class="col">
+                                <h5>Total: <span style="color: orange;"> N 1,900,800 </span> </h5>
+                            </div>
+                        </div>
+                    </div>                   
+                @endif
 
-            </div>
+            <!-- </div> -->
         </div>
         <div class="col-1"></div>
     </div>
