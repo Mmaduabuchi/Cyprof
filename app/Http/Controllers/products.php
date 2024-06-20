@@ -21,7 +21,8 @@ class products extends Controller
         return view("/products/Appliances");
     }
     public function BabyProducts(){
-        return view("/products/Baby-Products");
+        $BabiesProductsData = DB::select("SELECT * FROM products WHERE productcategories = ?", ['Babies']);
+        return view("/products/Baby-Products", ['Babies' => $BabiesProductsData]);
     }
     public function Computing(){
         return view("/products/Computing");
@@ -30,13 +31,15 @@ class products extends Controller
         return view("/products/Electronics");
     }
     public function Fashion(){
-        return view("/products/Fashion");
+        $FashionProductsData = DB::select("SELECT * FROM products WHERE productcategories = ?", ['Fashion']);
+        return view("/products/Fashion", ['Fashion' => $FashionProductsData]);
     }
     public function Gaming(){
         return view("/products/Gaming");
     }
     public function PhoneTablets(){
-        return view("/products/Phones&Tablets");
+        $phoneProductsData = DB::select("SELECT * FROM products WHERE productcategories = ?", ['Phone']);
+        return view("/products/Phones&Tablets", ['phoneProductsData' => $phoneProductsData]);
     }
     public function SportingGoods(){
         return view("/products/Sporting-Goods");

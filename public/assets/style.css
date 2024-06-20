@@ -163,6 +163,10 @@ footer{
     background-color: orange;
     color: white;
 }
+.contactHelpContainer2{
+    background-color: rgb(250, 211, 140);
+    color: white;
+}
 .headerContainer{
     background-color: white;
 }
@@ -453,5 +457,50 @@ progress::-webkit-progress-value{
     width: 100%;
 }
 .addItemNumberContainer{
+    display: none;
+}
+.HelpCardContainer{
+    border-top: 3px solid orange;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    color: black;
+}
+.HelpCardContainer:hover{
+    cursor: pointer;
+    box-shadow: -0px -0px 6px orange;
+}
+.helpCenterSidebarContainer{
+    border: 2px solid grey;
+    border-radius: 0.4rem;
+    width: 80%;
+}
+.helpCenterRightSidebarContainer{
+    border: 2px solid grey;
+    border-radius: 0.4rem;
+    width: 100%;    
+    background-color: white;
+}
+.SidebarInnerContainer{
+    border-bottom: 2px solid grey;
+    padding: 0.6rem;
+}
+.SidebarInnerContainerEnd{
+    padding: 0.6rem;
+}
+.SidebarInnerContainerPayments{
+    border-bottom: 2px solid grey;
+    border-left: 4px solid orange;
+    padding: 0.6rem;
+    background-color: rgb(250, 211, 140);
+    color: white;
+}
+.SidebarInnerContainer, .SidebarInnerContainerEnd :hover{
+    cursor: pointer;
+}
+.hiddenAnswerContainer, .hiddenAnswerContainer2, .hiddenAnswerContainer3, .hiddenAnswerContainer4, .hiddenAnswerContainer5, .hiddenAnswerContainer6, .hiddenAnswerContainer7, .hiddenAnswerContainer8, .hiddenAnswerContainer9, .hiddenAnswerContainer10{
+    display: none;
+}
+.fa-minus{
     display: none;
 }

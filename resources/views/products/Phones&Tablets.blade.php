@@ -15,11 +15,41 @@
     </section>
     {{-- end for header --}}
     
-    <div class="row mt-3">
-        <div class="col text-center p-4 contactHelpContainer">
-            <h1>HELP CENTER</h1>
-        </div>
-    </div>
+    <section class="mt-3">
+            <div class="row">
+                <div class="col col-md-1"></div>
+                <div class="col goodsContainer bg-white">
+                    <div class="row">
+                        <div class="topDealTextContainer2 col-12">
+                            <h3>Phone & Tablets</h3>
+                        </div>
+                        @foreach ($phoneProductsData as $productItem)
+                            <div class="col col-md-3 mt-2 shadow-lg">
+                                <div class="d-flex p-2 flex-column productsItemsContainer">
+                                    <a href="{{ route("products", ["productCodeID" => $productItem->id ]) }}" class="text-dark text-decoration-none">
+                                        <img src="{{ asset('storage/'.$productItem->productimage) }}" alt="product image" class="w-100">
+                                        <span>{{ $productItem->productname }}</span>
+                                        {{-- <span>{{ $productItem->productdescription }}</span> --}}
+                                        <p>
+                                            <b>
+                                                <i class="fa-solid fa-naira-sign"> {{ $productItem->productprice }}</i>
+                                                <br>
+                                                <sub><del style="color: grey">{{ $productItem->productOldprice }}</del></sub>
+                                            </b>
+                                        </p>
+                                        <span style="font-weight: bold;">{{ $productItem->productInStock }} items left</span>
+                                        <progress value="30" max="100"></progress>
+                                        <p> <b>CYPROF</b><i class="fa fa-wind"></i><span style="font-weight: bold; color: orange;">EXPRESS</span></p>
+                                    </a>
+                                </div>
+                            </div>
+                            <br><br>
+                        @endforeach
+                    </div>
+                </div>
+                <div class="col col-md-1"></div>
+            </div>
+        </section>
       
     <div class="row">
         @extends('footer')
