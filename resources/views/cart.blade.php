@@ -54,7 +54,7 @@
         </div>
         <div class="col col-md-7">
             <!-- <div class="cartContainer2 text-center"> -->
-                @if ($cartsData == "")
+                @if ($cartsData == null)
                     <div class="cartContainer2 text-center">
                         <i class="fa fa-shopping-cart cartpageIcon"></i>
                         <br>

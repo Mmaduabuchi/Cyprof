@@ -99,6 +99,7 @@ $(document).ready(function () {
                 $("#exampleModalCenter").modal('toggle');
             }).fail(function(error){
                 console.log(error);
+                // alert(error);
             });
         });
     });    

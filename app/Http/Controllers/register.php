@@ -28,6 +28,8 @@ class register extends Controller
             'password' => ['required_with:Confirm_password', 'same:Confirm_password', Password::min(8)->letters()->mixedCase()->numbers()->symbols()],
             'Confirm_password' => '',
         ]);
+        
+        $userToken = bin2hex(random_bytes(16));
 
         $user = User::create([
             'name' => $request->username,
@@ -35,6 +37,7 @@ class register extends Controller
             'phone' => $request->phone,
             'password' => Hash::make($request->password),
             'role' => 'guest',
+            'userToken' => $userToken,
 
         ]);
         if (!$user) {

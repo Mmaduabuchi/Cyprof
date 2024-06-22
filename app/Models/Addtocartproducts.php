@@ -17,6 +17,7 @@ class Addtocartproducts extends Model
         "productprice",
         "productimage",
         "productamount",
+        "userToken",
     ];
 
     // protected $casts = [
