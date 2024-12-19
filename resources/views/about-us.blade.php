@@ -9,9 +9,7 @@
 <body class="bg-light">
     {{-- header --}}
     <section class="headerSectionNavContainer">
-        <div class="row">
             @include('header')
-        </div>
     </section>
     {{-- end for header --}}
     

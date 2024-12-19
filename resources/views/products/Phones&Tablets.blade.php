@@ -24,7 +24,7 @@
                             <h3>Phone & Tablets</h3>
                         </div>
                         @foreach ($phoneProductsData as $productItem)
-                            <div class="col col-md-3 mt-2 shadow-lg">
+                            <div class="col col-md-2 mt-2 shadow-lg">
                                 <div class="d-flex p-2 flex-column productsItemsContainer">
                                     <a href="{{ route("products", ["productCodeID" => $productItem->id ]) }}" class="text-dark text-decoration-none">
                                         <img src="{{ asset('storage/'.$productItem->productimage) }}" alt="product image" class="w-100">

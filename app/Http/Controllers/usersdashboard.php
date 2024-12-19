@@ -37,11 +37,13 @@ class usersdashboard extends Controller
         $phoneProductsData = DB::select("SELECT * FROM products WHERE productcategories = ?", ['Phone']);
         $FashionProductsData = DB::select("SELECT * FROM products WHERE productcategories = ?", ['Fashion']);
         $BabiesProductsData = DB::select("SELECT * FROM products WHERE productcategories = ?", ['Babies']);
+        $ElectronicsProductsData = DB::select("SELECT * FROM products WHERE productcategories = ?", ['Electronics']);
         return view('welcome', [
             'products' => $productsData, 
             'phoneProductsData' => $phoneProductsData,
             'Fashion' => $FashionProductsData,
-            'Babies' => $BabiesProductsData
+            'Babies' => $BabiesProductsData,
+            'ElectronicsData' => $ElectronicsProductsData
         ]);
     }
 

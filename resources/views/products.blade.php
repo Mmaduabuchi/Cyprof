@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Cyprof Products</title>
 </head>
+
 <body class="bg-light">
     {{-- header --}}
     <section class="headerSectionNavContainer">
-        <div class="row">
-            @include('header')
-        </div>
+        @include('header')
     </section>
     {{-- end for header --}}
 
@@ -24,87 +24,87 @@
                 <div class="col-8 itemDescriptionContainer">
                     <div class="row">
                         @foreach ($match as $item)
-                            <div class="col">
-                                <div class="row">
-                                    <div class="col">
-                                        <img src="{{ asset('storage/'.$item->productimage) }}" id="productpageImage" alt="item image">
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="gridItemImageContainer mt-2">
-                                            <div>
-                                                <img src="{{ asset('storage/'.$item->productimage) }}" class="gridItemImage" alt="item image">
-                                            </div>
-                                            <div>
-                                                <img src="{{ asset('storage/'.$item->productimage) }}" class="gridItemImage" alt="item image">
-                                            </div>
-                                            <div>
-                                                <img src="{{ asset('storage/'.$item->productimage) }}" class="gridItemImage" alt="item image">
-                                            </div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="{{ asset('storage/'.$item->productimage) }}" id="productpageImage" alt="item image">
+                                </div>
+                                <div class="col-12">
+                                    <div class="gridItemImageContainer mt-2">
+                                        <div>
+                                            <img src="{{ asset('storage/'.$item->productimage) }}" class="gridItemImage" alt="item image">
+                                        </div>
+                                        <div>
+                                            <img src="{{ asset('storage/'.$item->productimage) }}" class="gridItemImage" alt="item image">
+                                        </div>
+                                        <div>
+                                            <img src="{{ asset('storage/'.$item->productimage) }}" class="gridItemImage" alt="item image">
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-7 pt-3">
-                                <div class="row">
-                                    <div class="col">
-                                        <span class="TxtDetailsHolder bg-primary text-light">Official Store</span>
-                                        <span class="TxtDetailsHolder bg-warning text-light">Free Delivery</span>
-                                    </div>
-                                    <div class="col-2 text-center">
-                                        <span class="fa fa-heart heartIcon"></span>
-                                    </div>
+                        </div>
+                        <div class="col-7 pt-3">
+                            <div class="row">
+                                <div class="col">
+                                    <span class="TxtDetailsHolder bg-primary text-light">Official Store</span>
+                                    <span class="TxtDetailsHolder bg-warning text-light">Free Delivery</span>
                                 </div>
-                                <br>
-                                <h4>{{ $item->productname }}</h4>
-                                <div class="divPriceContainer mt-2">
-                                    <div class="divPriceInnerContainer">Flash Sale</div>
-                                    <h4 class="m-3"> <i class="fa-solid fa-naira-sign"></i>{{ $item->productprice }} <sub><del style="color: grey">{{ $item->productOldprice }}.00</del></sub> </h4>
+                                <div class="col-2 text-center">
+                                    <span class="fa fa-heart heartIcon"></span>
                                 </div>
-                                <span> + Shipping From Cyprof</span>
-                                <button class="btn btnAddToCartItem mt-1">ADD TO CART</button>
-                                <div class="mt-2 text-center addItemNumberContainer">
-                                    <!-- <form action="{{ route('addtocart') }}" id="addtocartFromContainer" method="post">
+                            </div>
+                            <br>
+                            <h4>{{ $item->productname }}</h4>
+                            <div class="divPriceContainer mt-2">
+                                <div class="divPriceInnerContainer">Flash Sale</div>
+                                <h4 class="m-3"> <i class="fa-solid fa-naira-sign"></i>{{ $item->productprice }} <sub><del style="color: grey">{{ $item->productOldprice }}.00</del></sub> </h4>
+                            </div>
+                            <span> + Shipping From Cyprof</span>
+                            <button class="btn btnAddToCartItem mt-1">ADD TO CART</button>
+                            <div class="mt-2 text-center addItemNumberContainer">
+                                <!-- <form action="{{ route('addtocart') }}" id="addtocartFromContainer" method="post">
                                         @csrf -->
-                                        <div class="row">
-                                            <div class="col text-left">
-                                                <span>Add Product Quantity:</span>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col text-end">
-                                                <button class="btn btn-info w-100" id="minusBtn">-</button>
-                                            </div>
-                                            <div class="col text-center">
-                                                <input type="text" class="form-control w-100" value="1" id="answer" name="answer" disabled>
-                                            </div>
-                                            <div class="col text-start">
-                                                <button class="btn btn-info w-100" id="addBtn">+</button>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-2">
-                                            <div class="col text-left">
-                                                <!-- Button trigger modal -->
-                                                <!-- <button class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">Add Item To Cart <i class="fa fa-shopping-cart"></i></button> -->
-                                                
-                                                <form name="addtocartFromContainer" id="addtocartFromContainer">
-                                                    <!-- @csrf -->
-                                                    <input type="hidden" name="InputproductIDCode" id="productIDCode" value="{{ $item->id }}">
-                                                    <input type="hidden" name="productsQuantity" id="productsQuantity" value="1">
-                                                    <button class="btn btn-success" id="addToCartSubmitBtn">Add Item To Cart <i class="fa fa-shopping-cart"></i></button>
-                                                </form>
-                                            </div>
-                                            <div class="col text-right">
-                                                <button class="btn btn-primary">Proceed To Checkout <i class="fa fa-credit-card"></i></button>
-                                            </div>
+                                <div class="row">
+                                    <div class="col text-left">
+                                        <span>Add Product Quantity:</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col text-end">
+                                        <button class="btn btn-info w-100" id="minusBtn">-</button>
+                                    </div>
+                                    <div class="col text-center">
+                                        <input type="text" class="form-control w-100" value="1" id="answer" name="answer" disabled>
+                                    </div>
+                                    <div class="col text-start">
+                                        <button class="btn btn-info w-100" id="addBtn">+</button>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col text-left">
+                                        <!-- Button trigger modal -->
+                                        <!-- <button class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">Add Item To Cart <i class="fa fa-shopping-cart"></i></button> -->
 
-                                            <!-- Modal -->
-                                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                                <div class="modal-content">
+                                        <form name="addtocartFromContainer" id="addtocartFromContainer">
+                                            <!-- @csrf -->
+                                            <input type="hidden" name="InputproductIDCode" id="productIDCode" value="{{ $item->id }}">
+                                            <input type="hidden" name="productsQuantity" id="productsQuantity" value="1">
+                                            <button class="btn btn-success" id="addToCartSubmitBtn">Add Item To Cart <i class="fa fa-shopping-cart"></i></button>
+                                        </form>
+                                    </div>
+                                    <div class="col text-right">
+                                        <button class="btn btn-primary">Proceed To Checkout <i class="fa fa-credit-card"></i></button>
+                                    </div>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
                                                 <div class="modal-header">
                                                     <h5 class="modal-title" id="exampleModalLongTitle">Item Added To Cart</h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
+                                                        <span aria-hidden="true">&times;</span>
                                                     </button>
                                                 </div>
                                                 <div class="modal-body">
@@ -116,21 +116,21 @@
                                                         <button type="button" class="btn btn-primary">Proceed to Cart</button>
                                                     </a>
                                                 </div>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <!-- </form> -->
-                                    
                                 </div>
-                                <hr>
-                                <span><b>PROMOTIONS</b></span>
-                                <ul>
-                                    <li> <i class="fa fa-star"></i> Call 08132824987</li>
-                                    <li> <i class="fa fa-star"></i> Enjoy cheaper shipping fees when you select a Pickup Station at checkout.</li>
-                                </ul>
+
+                                <!-- </form> -->
+
                             </div>
+                            <hr>
+                            <span><b>PROMOTIONS</b></span>
+                            <ul>
+                                <li> <i class="fa fa-star"></i> Call 08132824987</li>
+                                <li> <i class="fa fa-star"></i> Enjoy cheaper shipping fees when you select a Pickup Station at checkout.</li>
+                            </ul>
+                        </div>
                         @endforeach
                     </div>
                 </div>
@@ -336,15 +336,16 @@
         </div>
         <div class="col-1"></div>
     </div>
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
     {{-- footer --}}
     <div class="row">
         @extends('footer')
-    </div>    
+    </div>
 </body>
+
 </html>

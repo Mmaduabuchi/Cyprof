@@ -28,7 +28,8 @@ class products extends Controller
         return view("/products/Computing");
     }
     public function Electronics(){
-        return view("/products/Electronics");
+        $ElectronicsProductsData = DB::select("SELECT * FROM products WHERE productcategories = ?", ['Electronics']);
+        return view("/products/Electronics", ['Electronics' => $ElectronicsProductsData]);
     }
     public function Fashion(){
         $FashionProductsData = DB::select("SELECT * FROM products WHERE productcategories = ?", ['Fashion']);
