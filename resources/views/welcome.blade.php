@@ -149,9 +149,9 @@
                                 </b>
                                 <!-- </p> -->
                                 <br>
-                                <span style="font-weight: bold;">{{ $productItem['productInStock'] }} items left</span>
-                                <progress value="40" max="100"></progress>
-                                <span class="cyprofExpress">
+                                <span class="d-none d-md-block" style="font-weight: bold;">{{ $productItem['productInStock'] }} items left</span>
+                                <progress class="d-none d-md-block" value="40" max="100"></progress>
+                                <span class="cyprofExpress d-none d-md-block" >
                                     <b>CYPROF</b><i class="fa fa-wind"></i><span style="font-weight: bold; color: orange;">EXPRESS</span>
                                 </span>
                             </a>
@@ -187,9 +187,9 @@
                                         <sub><del style="color: grey">{{ $productItem->productOldprice }}</del></sub>
                                     </b>
                                 </p>
-                                <span style="font-weight: bold;">{{ $productItem->productInStock }} items left</span>
-                                <progress value="30" max="100"></progress>
-                                <p> <b>CYPROF</b><i class="fa fa-wind"></i><span style="font-weight: bold; color: orange;">EXPRESS</span></p>
+                                <span class="d-none d-md-block" style="font-weight: bold;">{{ $productItem->productInStock }} items left</span>
+                                <progress class="d-none d-md-block" value="30" max="100"></progress>
+                                <p class="d-none d-md-block" > <b>CYPROF</b><i class="fa fa-wind"></i><span style="font-weight: bold; color: orange;">EXPRESS</span></p>
                             </a>
                         </div>
                     </div>
@@ -224,9 +224,9 @@
                                         <sub><del style="color: grey">{{ $productElectronicsItem->productOldprice }}</del></sub>
                                     </b>
                                 </p>
-                                <span style="font-weight: bold;">{{ $productElectronicsItem->productInStock }} items left</span>
-                                <progress value="60" max="100"></progress>
-                                <p> <b>CYPROF</b><i class="fa fa-wind"></i><span style="font-weight: bold; color: orange;">EXPRESS</span></p>
+                                <span class="d-none d-md-block" style="font-weight: bold;">{{ $productElectronicsItem->productInStock }} items left</span>
+                                <progress class="d-none d-md-block" value="60" max="100"></progress>
+                                <p class="d-none d-md-block" > <b>CYPROF</b><i class="fa fa-wind"></i><span style="font-weight: bold; color: orange;">EXPRESS</span></p>
                             </a>
                             <!-- <button class="btn text-light btnAddToCart ">ADD TO CART</button> -->
                         </div>
@@ -262,9 +262,9 @@
                                         <sub><del style="color: grey">{{ $productItem->productOldprice }}</del></sub>
                                     </b>
                                 </p>
-                                <span style="font-weight: bold;">{{ $productItem->productInStock }} items left</span>
-                                <progress value="30" max="100"></progress>
-                                <p> <b>CYPROF</b><i class="fa fa-wind"></i><span style="font-weight: bold; color: orange;">EXPRESS</span></p>
+                                <span class="d-none d-md-block" style="font-weight: bold;">{{ $productItem->productInStock }} items left</span>
+                                <progress class="d-none d-md-block" value="30" max="100"></progress>
+                                <p class="d-none d-md-block" > <b>CYPROF</b><i class="fa fa-wind"></i><span style="font-weight: bold; color: orange;">EXPRESS</span></p>
                             </a>
                         </div>
                     </div>
@@ -299,9 +299,9 @@
                                         <sub><del style="color: grey">{{ $productItem->productOldprice }}</del></sub>
                                     </b>
                                 </p>
-                                <span style="font-weight: bold;">{{ $productItem->productInStock }} items left</span>
-                                <progress value="80" max="100"></progress>
-                                <p> <b>CYPROF</b><i class="fa fa-wind"></i><span style="font-weight: bold; color: orange;">EXPRESS</span></p>
+                                <span class="d-none d-md-block" style="font-weight: bold;">{{ $productItem->productInStock }} items left</span>
+                                <progress class="d-none d-md-block" value="80" max="100"></progress>
+                                <p class="d-none d-md-block" > <b>CYPROF</b><i class="fa fa-wind"></i><span style="font-weight: bold; color: orange;">EXPRESS</span></p>
                             </a>
                         </div>
                     </div>

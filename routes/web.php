@@ -6,12 +6,28 @@ use App\Http\Controllers\products;
 use App\Http\Controllers\usersdashboard;
 use App\Http\Controllers\admin;
 use App\Http\Controllers\addtocart;
+use App\Http\Controllers\resetPassword;
 
 Route::get('/', [usersdashboard::class, 'display'])->name('home');
 
 Route::get('/contact', function () {
     return view('contact');
 });
+
+// forgotten password
+Route::get('/forgot', function () {
+    return view('forgot');
+})->name('forgot');
+//post method
+Route::post('/forgot', [resetPassword::class, 'forgotten'])->name('forgot');
+
+//resetting password
+Route::get('/reset', function () {
+    return view('reset');
+})->name('reset');
+//post method
+Route::post('/reset', [resetPassword::class, 'success'])->name('reset');
+
 Route::get('/help', function () {
     return view('help');
 })->name('help');

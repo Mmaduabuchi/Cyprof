@@ -53,7 +53,7 @@
 
     <section class="container">
         <div class="row mt-4">
-            <div class="col">
+            <div class="col-12 col-md-4">
                 <div class="row p-4">
                     <div class="helpCenterSidebarContainer">
                         <div class="col-12 SidebarInnerContainer SidebarInnerContainerPayments">
@@ -107,7 +107,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-8">
+            <div class="col-12 col-md-8">
                 <div class="row">
                     <div class="col">
                         <div class="row p-4">

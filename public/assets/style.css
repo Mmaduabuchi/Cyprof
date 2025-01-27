@@ -132,7 +132,7 @@ footer{
 .cartContainerInnerBox{
     /* background-image: linear-gradient(to bottom, white, rgb(252, 241, 221)); */
     box-shadow: -0px -0px 3px rgb(206, 205, 205);
-    border-radius: 0.6rem;
+    border-radius: 0.4rem;
     padding: 0.5rem;
 }
 .cartContainerInnerBoxSpanText{

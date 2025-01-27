@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="{{ asset("assets/style.css") }}">
     <link rel="stylesheet" href="{{asset("assets/bootstrap-4/css/bootstrap.css")}}">
 </head>
+
 <body>
     <div class="row">
         <div class="col"></div>
@@ -16,23 +18,25 @@
             <h3 class="text-center"><span id="sitename">Cy</span>prof</h3>
             <hr>
             @if (session()->has('success'))
-                <div class="alert alert-success" role="alert">
-                    {{ session()->get('success') }}
-                </div>                
+            <div class="alert alert-success" role="alert">
+                {{ session()->get('success') }}
+            </div>
             @endif
+
             @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
             @endif
+            
             @if (session()->has('error'))
-                <div class="alert alert-danger">{{ session('error') }}</div>                
+                <div class="alert alert-danger">{{ session('error') }}</div>
             @endif
-            <section  id="signupFormContainer" class="mb-5">
+            <section id="signupFormContainer" class="mb-5">
                 <form action="{{ route('loginpost') }}" method="post">
                     @csrf
                     <h3>Welcome Back!</h3>
@@ -45,7 +49,9 @@
                     <br>
                     <input type="submit" value="Continue" class="SignupSubmitBtn">
                 </form>
-                <button class="btn btn-danger mt-3 w-100">Forgotten password!</button>
+                <a href="{{ route('forgot') }}">
+                    <button class="btn btn-danger mt-3 w-100">Forgotten password!</button>
+                </a>
                 <a href="{{ route('register') }}">
                     <button class="btn btn-success text-light w-100 fw-bold mt-2">New to Cyprof? Create an account</button>
                 </a>
@@ -61,6 +67,7 @@
         @extends('footer')
     </div>
     {{-- end for footer --}}
-    <script src="{{asset("assets/bootstrap-4/js/bootstrap.js")}}"></script>    
+    <script src="{{asset("assets/bootstrap-4/js/bootstrap.js")}}"></script>
 </body>
+
 </html>

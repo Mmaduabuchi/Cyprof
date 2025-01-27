@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>cart</title>
+    <title>Cart</title>
 </head>
 
 <body class="bg-light">
@@ -16,9 +16,9 @@
     {{-- end for header --}}
 
     <div class="row mt-3">
-        <div class="col ml-5">
+        <div class="col ml-5 p-2 d-none d-md-block">
             <div class="navigationContainer">
-                <ul class="navigationContainerUl">
+                <ul class="navigationContainerUl p-3">
                     <a href="/">
                         <li class="listNavBar"><span class="fa fa-apple-alt Icon"></span>Supermarket</li>
                     </a>
@@ -52,7 +52,7 @@
                 </ul>
             </div>
         </div>
-        <div class="col col-md-7">
+        <div class="col-11 ml-4 m-md-0 col-md-8">
             <!-- <div class="cartContainer2 text-center"> -->
             @if ($cartsData == null)
             <div class="cartContainer2 text-center">
@@ -80,17 +80,17 @@
                     <div class="col-7">
                         <div class="row">
                             <div class="col">
-                                <h5 style="color: orange;">{{ $Data->productname }}</h5>
+                                <h6 style="color: orange;">{{ $Data->productname }}</h6>
                                 <h6>N {{ $Data->productprice }}</h6>
                                 <span>In stock</span>
                             </div>
                             <div class="col">
-                                <h5>{{ $Data->productamount }} items</h5>
+                                <h6>{{ $Data->productamount }} items</h6>
                                 <span class="cartContainerInnerBoxSpanText">Added on: {{ $Data->created_at }}</span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-12 col-md-3">
                         <div class="row">
                             <div class="col-12 p-2"></div>
                             <div class="col-12">
@@ -101,7 +101,7 @@
                     </div>
                 </div>
                 @endforeach
-                <div class="row">
+                <div class="row mt-4">
                     <div class="col">
                         <h5>Total: <span style="color: orange;"> N 1,900,800 </span> </h5>
                     </div>
@@ -111,7 +111,7 @@
 
             <!-- </div> -->
         </div>
-        <div class="col-1"></div>
+        <div class="col-0 col-md-1"></div>
     </div>
 
     <div class="row mt-3">
